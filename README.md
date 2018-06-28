@@ -1,6 +1,10 @@
 # Kong-Middleman
 Kong image with [middleman plugin](https://github.com/pantsel/kong-middleman-plugin) already installed
 
+Kong requests a service or URL before reaching the final one. If an HTTP response code < 300 is returned, the request is accepted. If it is >= 300 request would be rejected
+
+![Diagram](./assets/diagram.png)
+
 Requirements
   - Docker
 
