@@ -1,0 +1,4 @@
+# Dependency directory
+.idea/
+.vscode/
+.DS_Store
