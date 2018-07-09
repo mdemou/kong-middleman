@@ -1,5 +1,5 @@
 # Kong-Middleman
-Kong docker image with [middleman plugin](https://github.com/pantsel/kong-middleman-plugin) already installed
+Kong 0.12 docker image with [middleman plugin](https://github.com/pantsel/kong-middleman-plugin) 0.1.1-1 already installed
 
 Kong requests a service or URL before reaching the final one. If an HTTP response code < 300 is returned, the request is accepted. If it is >= 300 request would be rejected
 
@@ -16,14 +16,14 @@ $ docker build kong-middleman:${imagenumber} .
 ```
 
 ### Docker run
-```sh 
+```sh
 $ docker run --rm \
 -e "KONG_DATABASE=postgres" \
 -e "KONG_CASSANDRA_CONTACT_POINTS={{ RDS-Endpoint }}" \
--e "KONG_PG_DATABASE={{ DB Name }}" \  
--e "KONG_PG_HOST={{ RDS-Endpoint }}" \  
--e "KONG_PG_USER={{ DB Name }}" \    
--e "KONG_PG_PASSWORD={{ DB Password }}" \    
+-e "KONG_PG_DATABASE={{ DB Name }}" \ 
+-e "KONG_PG_HOST={{ RDS-Endpoint }}" \ 
+-e "KONG_PG_USER={{ DB Name }}" \
+-e "KONG_PG_PASSWORD={{ DB Password }}" \
 kong-middleman:${imagenumber}
 ```
 
